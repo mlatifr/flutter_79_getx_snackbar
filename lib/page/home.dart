@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -13,8 +14,11 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text('Halo ini snackbar')));
+          // // memunculkan pesan SnackBar
+          // ScaffoldMessenger.of(context)
+          //     .showSnackBar(SnackBar(content: Text('Halo ini snackbar')));
+          // memunculakn snackBar dengan GetX
+          Get.snackbar('Ini Judul', 'ini isi pesan');
         },
       ),
     );
