@@ -18,7 +18,14 @@ class HomePage extends StatelessWidget {
           // ScaffoldMessenger.of(context)
           //     .showSnackBar(SnackBar(content: Text('Halo ini snackbar')));
           // memunculakn snackBar dengan GetX
-          Get.snackbar('Ini Judul', 'ini isi pesan');
+          Get.snackbar(
+            'Ini Judul',
+            'ini isi pesan',
+            snackPosition: SnackPosition.BOTTOM,
+            onTap: (snack) {
+              Get.back();
+            },
+          );
         },
       ),
     );
